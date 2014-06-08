@@ -5,8 +5,22 @@
 
 	button.onclick = function () {
 		var str = sentence.value;
-		var arr = str.split(" ");
-		console.log(arr);
-	}
+		var arrayGroup = str.split(" ");
+		console.log(arrayGroup);
 
+		var arrayLength = arrayGroup.length;
+		var longestWord = "";
+
+		for (var i = 0; i < arrayLength; i++) {
+			textLength = arrayGroup[i].length;
+			console.log(arrayGroup[i].length);
+			if (arrayGroup[i].length > longestWord.length) {
+				longestWord = arrayGroup[i];
+			}
+		}
+
+		console.log(longestWord);
+		alert("The longest word in this sentence is " + longestWord + ".");
+	}
+	
 })();
